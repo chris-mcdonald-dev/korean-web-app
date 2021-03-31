@@ -1,0 +1,21 @@
+{
+  "name": "korean-web-app",
+  "version": "1.0.0",
+  "description": "Korean Web App",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  },
+  "author": "Chris McDonald",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
