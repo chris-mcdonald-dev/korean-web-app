@@ -1,4 +1,4 @@
-import './Welcome.css';
+import './Home.css';
 import { useState, useEffect } from 'react';
 
 async function fetchData() {
@@ -6,7 +6,7 @@ async function fetchData() {
   return response.json();
 }
 
-function Welcome() {
+function Home() {
     const [postPrefix, setPostPrefix] = useState("Didn't get it yet :(")
     const [post, setPost] = useState("")
     
@@ -34,4 +34,4 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+export default Home;
