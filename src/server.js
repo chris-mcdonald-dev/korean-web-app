@@ -9,5 +9,11 @@ app.listen(port, () => {
 })
 
 app.get('/api/posts', cors(), (req, res) => {
-    res.send('Fox-Islam: I exclusively use study resources that include clementines. Nothing else.');
+    res.json(testData);
 })
+
+testData = {
+    "Fox-Islam": "I exclusively use study resources that include clementines. Nothing else.",
+    "Will": "Give me a juicebox full of mayonnaise, and I promise you I'm set.",
+    "Alia": "I don't shake fingers anymore because of Covid, sorry.",
+}

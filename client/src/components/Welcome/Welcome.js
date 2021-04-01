@@ -2,8 +2,8 @@ import './Welcome.css';
 import { useState, useEffect } from 'react';
 
 async function fetchData() {
-    const response = await fetch('/api/posts');
-    return response.text();
+  const response = await fetch('/api/posts');
+  return response.json();
 }
 
 function Welcome() {
@@ -11,17 +11,25 @@ function Welcome() {
     const [post, setPost] = useState("")
     
     useEffect(() => {
-        fetchData().then(data => {
-            setPostPrefix('Got something!');
-            setPost(data);
+      fetchData().then(data => {
+        if (data) {
+          let output = [];
+          for (const entry in data) {
+            output.push(<p key={entry}>{entry}: { data[entry]}</p>)
+          }
+          setPostPrefix('');
+          setPost(output);
+        }
         });
     }, []);
       
   return (
-    <div className="App">
-      <h1>Korean Web App</h1>
-          <p>{ postPrefix }</p>
-          <p>{ post }</p>
+    <div className="welcome-container">
+      <div className="welcome-card">
+        <h1 className="site-title">Korean Web App</h1>
+        <p>{ postPrefix }</p>
+        { post }
+      </div>
     </div>
   );
 }
