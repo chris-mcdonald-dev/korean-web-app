@@ -1,5 +1,5 @@
 # korean-web-app
-MERN Web app for the educational group on Discord.
+MERN Web app for the Korean language educational group on Discord.
 
 ## Installation
 Make sure you have node installed! https://nodejs.org/
@@ -8,7 +8,9 @@ Then in the root folder of the project, just run this command in your terminal:
 ```
 npm install
 ```
-
+* Make a copy of the `.env-sample` file and rename your new copied file to `.env`.
+* In the new `.env` file, paste your Database URI and port number and save (ask for these in the developers channel).
+__________
 That's it!  
 Run this command to start it in your browser:
 ```
