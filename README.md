@@ -1,5 +1,5 @@
 # korean-web-app
-MERN Web app for the Korean language educational group on Discord.
+A MERN Web App for the Korean language educational group on Discord with a user base of over 4,500 users.
 
 ## Installation
 Make sure you have node installed! https://nodejs.org/
