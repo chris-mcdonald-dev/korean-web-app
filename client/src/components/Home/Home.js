@@ -1,37 +1,38 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
 
-async function fetchData() {
-  const response = await fetch('/api/posts');
-  return response.json();
-}
+const initialState = [{
+  "content": "Loading the fake posts... :("
+}]
 
-function Home() {
-    const [postPrefix, setPostPrefix] = useState("Didn't get it yet :(")
-    const [post, setPost] = useState("")
+export default function Home() {
+  const [posts, setPostsOutput] = useState(initialState)
     
-    useEffect(() => {
-      fetchData().then(data => {
-        if (data) {
-          let output = [];
-          for (const entry in data) {
-            output.push(<p key={entry}>{entry}: { data[entry]}</p>)
-          }
-          setPostPrefix('');
-          setPost(output);
-        }
-        });
-    }, []);
+  useEffect(() => {
+    async function fetchPosts() {
+      let postsArr = await fetch('/api/posts')
+      postsArr = await postsArr.json();
+      if (postsArr) {
+        setPostsOutput(postsArr);
+      }
+      else {
+        setPostsOutput(<h1>Oh dear. It doesn't look like there are any posts.</h1>);
+      }
+    }
+    fetchPosts();
+  }, []);
       
   return (
-    <div className="welcome-container">
-      <div className="welcome-card">
-        <h1 className="site-title">Korean Web App</h1>
-        <p>{ postPrefix }</p>
-        { post }
+    <div className="main-container">
+      <div className="main-card">
+        <h1 className="main-title">Korean Web App</h1>
+        {posts.map((post, index) =>(
+          <div className="main-inner-card" key={index}>
+            <h3>{post.author}</h3>
+            <p>{post.content}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
-
-export default Home;

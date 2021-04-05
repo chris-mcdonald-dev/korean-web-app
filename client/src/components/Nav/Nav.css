@@ -1,8 +1,8 @@
 .nav-container {
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 30px 0px;
 }
 
 .nav-links {
@@ -15,5 +15,5 @@
 .nav-links a {
     margin: 0 20px;
     text-decoration: none;
-    color: #9acffd;
+    color: rgb(107, 144, 156);
 }
