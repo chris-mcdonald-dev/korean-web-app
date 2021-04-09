@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import VocabList from "./VocabList";
 
 const initialState = [
 
@@ -21,9 +22,7 @@ export default function Vocab() {
                 <h1 className="main-title">Weekly Vocabulary</h1>
                 <div className="main-inner-card">
                     <h3>Week 15</h3>
-                    {vocab.map((word, index) => 
-                        <p key={index}>{word.korean} - {word.english}</p>    
-                    )}
+                    <VocabList vocab = {vocab}/>
                 </div>
             </div>
         </div>

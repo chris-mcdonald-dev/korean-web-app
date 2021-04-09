@@ -5,6 +5,11 @@
     padding: 30px 0px;
 }
 
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
 .nav-links {
     display: flex;
     justify-content: center;
@@ -12,8 +17,13 @@
     height: 100%;
 }
 
-.nav-links a {
+.nav-links a, .login-link a, .logo a {
     margin: 0 20px;
     text-decoration: none;
     color: rgb(107, 144, 156);
+}
+
+.login-link {
+    position: absolute;
+    right: 30px;
 }
