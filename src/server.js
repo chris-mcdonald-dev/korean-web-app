@@ -1,4 +1,5 @@
 const dotenv = require("dotenv").config();
+const gSheets = require("./models/googlesheets/gSheetsConn");
 
 /******************************/
 /******** Express Setup *******/
@@ -44,8 +45,12 @@ app.get("/api/posts", cors(), (req, res) => {
 	res.json(testData);
 });
 app.get("/api/vocab", cors(), (req, res) => {
-	res.json(testVocab);
+	gSheets.getVocab("'Weekly Vocab'!A:B")
+		.then((weeklyVocab) => {
+			res.json(weeklyVocab)
+		})
 });
+
 
 testData = [
 	{

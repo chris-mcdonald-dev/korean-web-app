@@ -15,7 +15,7 @@ export default function Vocab() {
             setVocab(vocabArr);
         }
         getVocab();
-    })
+    },[])
     return (
         <div className="main-container">
             <div className="main-card">
