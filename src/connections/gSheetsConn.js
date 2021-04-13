@@ -1,5 +1,5 @@
 const { google } = require("googleapis");
-const keys = require("./keys.json");
+const keys = require("../../google-sheets.json");
 // Declare scopes that determine the authorization level
 const googleScopes = ["https://www.googleapis.com/auth/spreadsheets"];
 // Create client

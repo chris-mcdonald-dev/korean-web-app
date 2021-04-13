@@ -21,7 +21,7 @@ client/node_modules
 .env.production.local
 
 #keys
-src/models/googlesheets/keys.json
+google-sheets.json
 
 npm-debug.log*
 yarn-debug.log*

@@ -54,9 +54,3 @@ code {
 .main-card p {
   padding: 10px;
 }
-
-.main-title {
-  color: rgb(201, 229, 238);
-  display: flex;
-  align-self: left;
-}

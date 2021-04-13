@@ -6,7 +6,7 @@ export default function VocabList(props) {
     return (
         <div className="vocab-list">
             {vocab.map((word, index) => {
-                if (index == 0) return;
+                if (index === 0) return;
                 return <p key={word}>{word[0]} - {word[1]}</p>    
             })}
         </div>

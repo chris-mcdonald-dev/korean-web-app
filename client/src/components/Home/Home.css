@@ -20,3 +20,24 @@
 .site-title {
     color: #9acffd;
 }
+
+.main-card {
+    max-height: 3rem;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+
+.main-title {
+    color: rgb(201, 229, 238);
+    display: flex;
+    align-self: left;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.main-inner-card {
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height 5s ease;
+    transition: opacity 2s ease;
+}
