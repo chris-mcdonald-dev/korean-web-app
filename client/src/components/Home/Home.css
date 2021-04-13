@@ -24,20 +24,21 @@
 .main-card {
     max-height: 3rem;
     transition: all .5s ease;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .main-title {
     color: rgb(201, 229, 238);
     display: flex;
     align-self: left;
-    opacity: 0;
+    opacity: 1;
     transition: all 2s ease;
 }
 
 .main-inner-card {
-    max-height: 0px;
-    opacity: 0;
+    /* max-height: 0px; */
+    opacity: 1;
+    border-radius: 3px;
     transition: max-height 5s ease;
     transition: opacity 2s ease;
 }

@@ -1,5 +1,5 @@
 .nav-container {
-    background-color: #ffffff;
+    background-color: rgb(10, 10, 10);
     display: flex;
     justify-content: center;
     padding: 30px 0px;
@@ -17,10 +17,15 @@
     height: 100%;
 }
 
-.nav-links a, .login-link a, .logo a {
+.nav-container a {
     margin: 0 20px;
     text-decoration: none;
-    color: rgb(107, 144, 156);
+    color: rgb(126, 168, 182);
+    transition: .5s all ease;
+}
+.nav-container a:hover {
+    color: white;
+    transition: .2s all ease;
 }
 
 .login-link {

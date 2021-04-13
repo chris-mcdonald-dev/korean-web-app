@@ -5,7 +5,7 @@ export default function ResourceCards(props) {
     return (
         <div className="cards-container">
             {resources.map(resource => (
-                <div className="inner-card" key={resource._id}>
+                <div className="main-inner-card resource-inner-card" key={resource._id}>
                     <h3>{resource.title}</h3>
                     <p>{resource.content}</p>
                 </div>

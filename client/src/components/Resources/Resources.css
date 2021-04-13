@@ -2,17 +2,16 @@
     display: flex;
 }
 
-.inner-card {
+.resource-inner-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(39, 39, 41);
     width: 200px;
     margin: 20px 20px;
     padding: 20px;
 }
 
-.inner-card > p {
+.resource-inner-card > p {
     width: 100%;
     word-wrap: break-word;
 }

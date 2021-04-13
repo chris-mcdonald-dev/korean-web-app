@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(201, 229, 238);
+  background-color: rgb(17, 17, 17);
   color: #f8f8f8;
   /* text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.15); */
 }
@@ -31,7 +31,7 @@ code {
   justify-content: center;
 }
 .main-card {
-  background-color: #1b1d20;
+  /* background-color: rgb(10, 10, 10); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +46,7 @@ code {
   flex-direction: column;
   align-items: center;
   background: rgba(39, 39, 41, .5);
+  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.1);
   width: 500px;
   padding: 20px;
   margin: 15px;
