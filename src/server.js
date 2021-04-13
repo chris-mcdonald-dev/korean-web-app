@@ -1,5 +1,5 @@
 const dotenv = require("dotenv").config();
-const gSheets = require("./models/googlesheets/gSheetsConn");
+const gSheets = require("./connections/gSheetsConn");
 
 /******************************/
 /******** Express Setup *******/
