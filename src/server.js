@@ -1,5 +1,12 @@
+const eHandler = require("./utilities/error-handlers");
 const dotenv = require("dotenv").config();
-const gSheets = require("./connections/gSheetsConn");
+
+let gSheets;
+try {
+	gSheets = require("./connections/gSheetsConn");
+} catch (error) {
+	console.log(error.message, eHandler.getSheetsNotFoundMsg());
+}
 
 /******************************/
 /******** Express Setup *******/
@@ -45,10 +52,14 @@ app.get("/api/posts", cors(), (req, res) => {
 	res.json(testData);
 });
 app.get("/api/vocab", cors(), (req, res) => {
-	gSheets.getVocab("'Weekly Vocab'!A:B")
-		.then((weeklyVocab) => {
-			res.json(weeklyVocab)
-		})
+	try {
+		gSheets.getVocab("'Weekly Vocab'!A:B")
+			.then((weeklyVocab) => {
+				res.json(weeklyVocab)
+			})
+	} catch (error) {
+		console.log(error.message, eHandler.getSheetsNotFoundMsg());
+	}
 });
 
 
